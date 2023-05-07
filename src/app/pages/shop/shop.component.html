@@ -1,0 +1,28 @@
+<div class="brand-filter">
+  <button (click)="onBrandSelect('All')">All</button>
+  <button (click)="onBrandSelect('Alcatel')">Alcatel</button>
+  <button (click)="onBrandSelect('Apple')">Apple</button>
+  <button (click)="onBrandSelect('Honor')">Honor</button>
+  <button (click)="onBrandSelect('Huawei')">Huawei</button>
+  <button (click)="onBrandSelect('LG')">LG</button>
+  <button (click)="onBrandSelect('Motorola')">Motorola</button>
+  <button (click)="onBrandSelect('Nokia')">Nokia</button>
+  <button (click)="onBrandSelect('Oppo')">Oppo</button>
+  <button (click)="onBrandSelect('Redmi')">Redmi</button>
+  <button (click)="onBrandSelect('Samsung')">Samsung</button>
+  <button (click)="onBrandSelect('Xiaomi')">Xiaomi</button>
+</div>
+
+<div *ngIf="items | async as phones" class="phone-list">
+  <div *ngFor="let phone of phones | phoneBrand:selectedBrand" class="phone-card">
+    <div class="phone-image"></div>
+    <div class="phone-details">
+      <h2>{{phone.model}}</h2>
+      <p>{{phone.brand}}</p>
+      <p class="phone-price">Price: {{phone.price}} Ft</p>
+      <p>⭐ {{phone.rating}}</p>
+      <button class="add-to-cart-btn" (click)="addtoCart(phone)">Add to Cart</button>
+      <button class="remove-phone-btn" (click)="removePhone(phone)">Remove</button>
+    </div>
+  </div>
+</div>

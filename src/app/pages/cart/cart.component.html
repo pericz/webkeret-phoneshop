@@ -1,0 +1,28 @@
+<div class="cart-container">
+    <div *ngIf="items.length > 0" class="cart-items">
+      <div *ngFor="let item of items" class="cart-item">
+        <div class="item-image"></div>
+        <div class="item-details">
+          <h3 class="item-title">{{ item.model }}</h3>
+          <p class="item-brand">{{ item.brand }}</p>
+          <p class="item-price">{{ item.price }} Ft</p>
+        </div>
+        <div class="item-actions">
+          <button class="item-remove" (click)="removeFromCart(item)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="items.length > 0" class="cart-total">
+      <h4>Total:</h4>
+      <p>{{ getTotal() }} Ft</p>
+    </div>
+    <div *ngIf="items.length > 0" class="cart-buttons">
+      <button class="button-clear" (click)="clearCart()">Clear Cart</button>
+      <button class="button-checkout">Checkout</button>
+    </div>
+    <div *ngIf="items.length === 0" class="empty-cart">
+      <p>Your cart is empty.</p>
+      <a routerLink="/shop">Back to Shopping</a>
+    </div>
+  </div>
+  

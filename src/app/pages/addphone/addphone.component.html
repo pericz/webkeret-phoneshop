@@ -1,0 +1,33 @@
+<div class="signup-page">
+    <div class="signup-form">
+      <h1>Register a Phone</h1>
+      <form [formGroup]="addPhoneForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Brand:</mat-label>
+            <input matInput type="text" formControlName="brand" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Model:</mat-label>
+            <input matInput type="text" formControlName="model" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Price:</mat-label>
+            <input matInput type="number" formControlName="price" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Rating:</mat-label>
+            <input matInput type="number" formControlName="rating" />
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Add Phone</button>
+      </form>
+    </div>
+  </div>
+  

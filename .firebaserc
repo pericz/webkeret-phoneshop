@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "phone-webshop-4692a": {
+      "hosting": {
+        "week-04": [
+          "phone-webshop-4692a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "phone-webshop-4692a"
+  }
+}

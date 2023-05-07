@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav>
+    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" *ngIf="page" (onCloseSidenav)="onClose($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout($event)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <a routerLink="/main" class="logo">
+        <img src="assets/logo.png" alt="Phone Webshop">
+      </a>
+      <div class="navigation-items-container">
+        <ul class="navigation-items">
+          <li *ngIf="!(loggedInUser)"><a routerLink="/login">Login</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/login" (click)="logout()">Logout</a></li>
+          <li *ngIf="!(loggedInUser)"><a routerLink="/signup">Register</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/addphone">Add Phone</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/shop">Shop</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/cart">Cart</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

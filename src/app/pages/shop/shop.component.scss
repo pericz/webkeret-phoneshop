@@ -1,0 +1,108 @@
+.phone-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .phone-card {
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+  
+    &:hover {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+  
+    .phone-image {
+      margin-top: 10px;
+      height: 200px;
+      width: 100%;
+      background-image: url('https://st3.depositphotos.com/1114422/16335/v/600/depositphotos_163351650-stock-illustration-phone-cell-smart-mobile-3d.jpg');
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    .phone-details {
+      padding: 10px;
+  
+      h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+  
+      .phone-price {
+        font-weight: bold;
+      }
+    }
+  }
+  .add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #0062cc;
+  }
+  .brand-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .remove-phone-btn {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: right;
+    margin-left: 20%;
+  }
+  
+  .remove-phone-btn:hover {
+    background-color: #cc0000a2;
+  }
+  .brand-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .brand-filter button {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .brand-filter button:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+  }
+  
